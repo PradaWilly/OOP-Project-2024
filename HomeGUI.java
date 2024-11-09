@@ -9,7 +9,8 @@ package ecotrackapp;
  * @author sohei
  */
 public class HomeGUI extends javax.swing.JFrame {
-        /*test */
+        /*test */ 
+        /*test 2 */
     /**
      * Creates new form EnergyCalculatorGUI
      */
