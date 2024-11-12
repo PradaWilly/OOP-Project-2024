@@ -6,15 +6,16 @@ package ecotrackapp;
 
 /**
  *
- * @author cosmy
+ * @author sohei
  */
+import javax.swing.*;
+
+
 public class EcoTrackApp {
-
-
     public static void main(String[] args) {
-        
-        LoginGUI Login = new LoginGUI();
-        Login.setVisible(true);
+        HomeGUI homeGUI = new HomeGUI(); 
+        EnergyCalculatorGUI eCalc = new EnergyCalculatorGUI();
+        homeGUI.setVisible(true);
         
     }
     
