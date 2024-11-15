@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ecotrackapp;
+package surveyproject;
 
 /**
  *
@@ -26,7 +26,6 @@ public class ThisSurveyGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        TitleLbl = new javax.swing.JLabel();
         resetBtn = new javax.swing.JButton();
         submitBtn = new javax.swing.JButton();
         qs1Lbl = new javax.swing.JLabel();
@@ -35,86 +34,146 @@ public class ThisSurveyGUI extends javax.swing.JFrame {
         qs2Lbl = new javax.swing.JLabel();
         qs2Tf = new javax.swing.JTextField();
         qs3Tf = new javax.swing.JTextField();
+        surveySectionBtn = new javax.swing.JButton();
+        calculatorSectionBtn = new javax.swing.JButton();
+        homeSectionBtn = new javax.swing.JButton();
+        changeBTN = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(360, 160));
+        setResizable(false);
 
-        TitleLbl.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        TitleLbl.setForeground(new java.awt.Color(255, 0, 51));
-        TitleLbl.setText("SURVEY");
-        TitleLbl.setMaximumSize(new java.awt.Dimension(42, 25));
-        TitleLbl.setMinimumSize(new java.awt.Dimension(42, 25));
+        resetBtn.setText("Reset");
+        resetBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetBtnActionPerformed(evt);
+            }
+        });
 
-        resetBtn.setText("reset");
-
-        submitBtn.setText("submit");
+        submitBtn.setText("Submit");
 
         qs1Lbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        qs1Lbl.setText("question one is here");
+        qs1Lbl.setText("Question one is here?");
+
+        qs1Tf.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 255, 102), 3, true));
+        qs1Tf.setOpaque(true);
 
         qs3Lbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        qs3Lbl.setText("question three is here");
+        qs3Lbl.setText("Question three is here?");
 
         qs2Lbl.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        qs2Lbl.setText("question two is here");
+        qs2Lbl.setText("Question two is here?");
 
+        qs2Tf.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 255, 102), 3, true));
+        qs2Tf.setOpaque(true);
         qs2Tf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 qs2TfActionPerformed(evt);
             }
         });
 
+        qs3Tf.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 255, 102), 3, true));
+        qs3Tf.setOpaque(true);
         qs3Tf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 qs3TfActionPerformed(evt);
             }
         });
 
+        surveySectionBtn.setBackground(new java.awt.Color(102, 255, 102));
+        surveySectionBtn.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        surveySectionBtn.setText("SURVEY");
+        surveySectionBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        surveySectionBtn.setOpaque(true);
+        surveySectionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                surveySectionBtnActionPerformed(evt);
+            }
+        });
+
+        calculatorSectionBtn.setBackground(new java.awt.Color(102, 255, 102));
+        calculatorSectionBtn.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        calculatorSectionBtn.setText("ENERGY CONSUMPTION CALCULATOR");
+        calculatorSectionBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        calculatorSectionBtn.setOpaque(true);
+        calculatorSectionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculatorSectionBtnActionPerformed(evt);
+            }
+        });
+
+        homeSectionBtn.setBackground(new java.awt.Color(102, 255, 102));
+        homeSectionBtn.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        homeSectionBtn.setText("HOME");
+        homeSectionBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        homeSectionBtn.setOpaque(true);
+
+        changeBTN.setText("Next Questions");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ross P\\Downloads\\EcoTrackIcon (2).png")); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(300, 300, 300)
-                        .addComponent(TitleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(resetBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 394, Short.MAX_VALUE)
-                                .addComponent(submitBtn))
-                            .addComponent(qs3Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(qs2Lbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(qs1Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(qs1Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(qs2Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(qs3Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addGap(127, 127, 127)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(qs3Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+                    .addComponent(qs2Lbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(qs1Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(qs2Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(qs1Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(resetBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(90, 90, 90)
+                            .addComponent(changeBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(qs3Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(111, 135, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(homeSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(calculatorSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(surveySectionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(174, 174, 174))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(TitleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(homeSectionBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                    .addComponent(calculatorSectionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(surveySectionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(qs1Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(qs1Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(qs2Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(qs2Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(qs3Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(qs3Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addComponent(qs2Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(qs3Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(qs3Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(resetBtn)
+                    .addComponent(changeBTN)
                     .addComponent(submitBtn))
-                .addGap(45, 45, 45))
+                .addGap(110, 110, 110))
         );
 
         pack();
@@ -127,6 +186,18 @@ public class ThisSurveyGUI extends javax.swing.JFrame {
     private void qs3TfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qs3TfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_qs3TfActionPerformed
+
+    private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resetBtnActionPerformed
+
+    private void surveySectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surveySectionBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_surveySectionBtnActionPerformed
+
+    private void calculatorSectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculatorSectionBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_calculatorSectionBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,7 +235,10 @@ public class ThisSurveyGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel TitleLbl;
+    private javax.swing.JButton calculatorSectionBtn;
+    private javax.swing.JButton changeBTN;
+    private javax.swing.JButton homeSectionBtn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel qs1Lbl;
     private javax.swing.JTextField qs1Tf;
     private javax.swing.JLabel qs2Lbl;
@@ -173,5 +247,6 @@ public class ThisSurveyGUI extends javax.swing.JFrame {
     private javax.swing.JTextField qs3Tf;
     private javax.swing.JButton resetBtn;
     private javax.swing.JButton submitBtn;
+    private javax.swing.JButton surveySectionBtn;
     // End of variables declaration//GEN-END:variables
 }
