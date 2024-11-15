@@ -25,9 +25,12 @@ public class LoginGUI extends javax.swing.JFrame {
         noAccount = new javax.swing.JLabel();
         loginSignupButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        TrackLog = new javax.swing.JLabel();
+        EcoLog = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
+        setLocation(new java.awt.Point(360, 160));
         setMaximumSize(new java.awt.Dimension(800, 500));
         setPreferredSize(new java.awt.Dimension(800, 500));
         setSize(new java.awt.Dimension(800, 500));
@@ -40,7 +43,7 @@ public class LoginGUI extends javax.swing.JFrame {
         });
         getContentPane().add(loginEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 220, 40));
 
-        loginButton.setBackground(new java.awt.Color(0, 204, 153));
+        loginButton.setBackground(new java.awt.Color(102, 255, 102));
         loginButton.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
@@ -58,7 +61,7 @@ public class LoginGUI extends javax.swing.JFrame {
         getContentPane().add(loginPasswordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, -1, -1));
 
         loginLabel.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
-        loginLabel.setForeground(new java.awt.Color(0, 204, 153));
+        loginLabel.setForeground(new java.awt.Color(102, 255, 102));
         loginLabel.setText("LOGIN");
         getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
 
@@ -68,7 +71,7 @@ public class LoginGUI extends javax.swing.JFrame {
 
         noAccount.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         noAccount.setText("I don't have an account");
-        getContentPane().add(noAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 146, -1));
+        getContentPane().add(noAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 146, -1));
 
         loginSignupButton.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         loginSignupButton.setForeground(new java.awt.Color(102, 102, 255));
@@ -78,20 +81,42 @@ public class LoginGUI extends javax.swing.JFrame {
                 loginSignupButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(loginSignupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, -1, -1));
+        getContentPane().add(loginSignupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, -1, -1));
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 153));
+        jPanel1.setBackground(new java.awt.Color(102, 255, 102));
         jPanel1.setPreferredSize(new java.awt.Dimension(350, 500));
+
+        TrackLog.setFont(new java.awt.Font("Calibri", 3, 100)); // NOI18N
+        TrackLog.setText("Track");
+
+        EcoLog.setFont(new java.awt.Font("Calibri", 3, 100)); // NOI18N
+        EcoLog.setText("Eco");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(EcoLog)
+                .addContainerGap(142, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(TrackLog)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(EcoLog, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(272, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(TrackLog)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 500));
@@ -116,6 +141,8 @@ public class LoginGUI extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EcoLog;
+    private javax.swing.JLabel TrackLog;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginButton;
     private javax.swing.JTextField loginEmail;

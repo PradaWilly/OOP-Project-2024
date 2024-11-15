@@ -23,9 +23,12 @@ public class RegisterGUI extends javax.swing.JFrame {
         registerRegisterLabel = new javax.swing.JLabel();
         registerEmailLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        EcoReg = new javax.swing.JLabel();
+        TrackReg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("REGISTER");
+        setLocation(new java.awt.Point(360, 160));
 
         registerEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -33,7 +36,7 @@ public class RegisterGUI extends javax.swing.JFrame {
             }
         });
 
-        signupButton.setBackground(new java.awt.Color(0, 204, 153));
+        signupButton.setBackground(new java.awt.Color(102, 255, 102));
         signupButton.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         signupButton.setForeground(new java.awt.Color(255, 255, 255));
         signupButton.setText("Sign up");
@@ -53,24 +56,46 @@ public class RegisterGUI extends javax.swing.JFrame {
         registerPasswordLabel.setText("Password");
 
         registerRegisterLabel.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
-        registerRegisterLabel.setForeground(new java.awt.Color(0, 204, 153));
+        registerRegisterLabel.setForeground(new java.awt.Color(102, 255, 102));
         registerRegisterLabel.setText("REGISTER");
 
         registerEmailLabel.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         registerEmailLabel.setText("Email");
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 153));
+        jPanel1.setBackground(new java.awt.Color(102, 255, 102));
         jPanel1.setPreferredSize(new java.awt.Dimension(300, 500));
+
+        EcoReg.setFont(new java.awt.Font("Calibri", 3, 100)); // NOI18N
+        EcoReg.setText("Eco");
+
+        TrackReg.setFont(new java.awt.Font("Calibri", 3, 100)); // NOI18N
+        TrackReg.setText("Track");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(EcoReg)
+                .addContainerGap(139, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(62, 62, 62)
+                    .addComponent(TrackReg)
+                    .addContainerGap(62, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(EcoReg, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(188, 188, 188)
+                    .addComponent(TrackReg)
+                    .addContainerGap(189, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -137,6 +162,8 @@ public class RegisterGUI extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel EcoReg;
+    private javax.swing.JLabel TrackReg;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField registerEmail;
     private javax.swing.JLabel registerEmailLabel;
