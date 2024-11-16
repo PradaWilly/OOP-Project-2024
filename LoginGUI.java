@@ -29,8 +29,8 @@ public class LoginGUI extends javax.swing.JFrame {
         EcoLog = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("LOGIN");
-        setLocation(new java.awt.Point(360, 160));
+        setTitle("EcoTrackLogin");
+        setLocation(new java.awt.Point(0, 0));
         setMaximumSize(new java.awt.Dimension(800, 500));
         setPreferredSize(new java.awt.Dimension(800, 500));
         setSize(new java.awt.Dimension(800, 500));
@@ -47,6 +47,11 @@ public class LoginGUI extends javax.swing.JFrame {
         loginButton.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 350, 119, 38));
 
         loginPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +68,7 @@ public class LoginGUI extends javax.swing.JFrame {
         loginLabel.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         loginLabel.setForeground(new java.awt.Color(102, 255, 102));
         loginLabel.setText("LOGIN");
-        getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
+        getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, -1, -1));
 
         loginEmailLabel.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         loginEmailLabel.setText("Email");
@@ -71,7 +76,7 @@ public class LoginGUI extends javax.swing.JFrame {
 
         noAccount.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         noAccount.setText("I don't have an account");
-        getContentPane().add(noAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 146, -1));
+        getContentPane().add(noAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 146, 20));
 
         loginSignupButton.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         loginSignupButton.setForeground(new java.awt.Color(102, 102, 255));
@@ -81,7 +86,7 @@ public class LoginGUI extends javax.swing.JFrame {
                 loginSignupButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(loginSignupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, -1, -1));
+        getContentPane().add(loginSignupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 102));
         jPanel1.setPreferredSize(new java.awt.Dimension(350, 500));
@@ -124,9 +129,11 @@ public class LoginGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+     HomeGUI homeGUI = new HomeGUI();
     private void loginSignupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginSignupButtonActionPerformed
-        RegisterGUI Register = new RegisterGUI();
-        Register.setVisible(true);
+        RegisterGUI registerGUI = new RegisterGUI();
+        registerGUI.setVisible(true);
+        this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_loginSignupButtonActionPerformed
 
@@ -137,6 +144,13 @@ public class LoginGUI extends javax.swing.JFrame {
     private void loginEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginEmailActionPerformed
+
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        // TODO add your handling code here:
+        homeGUI.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_loginButtonActionPerformed
 
   
 

@@ -27,8 +27,8 @@ public class RegisterGUI extends javax.swing.JFrame {
         TrackReg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("REGISTER");
-        setLocation(new java.awt.Point(360, 160));
+        setTitle("EcoTrackRegister");
+        setLocation(new java.awt.Point(0, 0));
 
         registerEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +76,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(68, 68, 68)
                 .addComponent(EcoReg)
                 .addContainerGap(139, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +88,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(120, 120, 120)
+                .addGap(131, 131, 131)
                 .addComponent(EcoReg, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,14 +122,14 @@ public class RegisterGUI extends javax.swing.JFrame {
                         .addGap(157, 157, 157))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(registerRegisterLabel)
-                        .addGap(132, 132, 132))))
+                        .addGap(134, 134, 134))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(35, 35, 35)
                 .addComponent(registerRegisterLabel)
-                .addGap(47, 47, 47)
+                .addGap(18, 18, 18)
                 .addComponent(registerEmailLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(registerEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -155,8 +155,10 @@ public class RegisterGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_registerPasswordActionPerformed
 
     private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupButtonActionPerformed
-        LoginGUI Login = new LoginGUI();
-        Login.setVisible(true);
+        HomeGUI hGUI = new HomeGUI();
+        hGUI.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_signupButtonActionPerformed
 
  
