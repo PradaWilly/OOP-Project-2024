@@ -1,5 +1,10 @@
 package ecotrackapp;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  *
  * @author cosmy
@@ -27,8 +32,8 @@ public class RegisterGUI extends javax.swing.JFrame {
         TrackReg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("EcoTrackRegister");
-        setLocation(new java.awt.Point(0, 0));
+        setTitle("REGISTER");
+        setLocation(new java.awt.Point(360, 160));
 
         registerEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +81,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(69, 69, 69)
                 .addComponent(EcoReg)
                 .addContainerGap(139, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +93,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(131, 131, 131)
+                .addGap(120, 120, 120)
                 .addComponent(EcoReg, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,14 +127,14 @@ public class RegisterGUI extends javax.swing.JFrame {
                         .addGap(157, 157, 157))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(registerRegisterLabel)
-                        .addGap(134, 134, 134))))
+                        .addGap(132, 132, 132))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addComponent(registerRegisterLabel)
-                .addGap(18, 18, 18)
+                .addGap(47, 47, 47)
                 .addComponent(registerEmailLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(registerEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -155,9 +160,43 @@ public class RegisterGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_registerPasswordActionPerformed
 
     private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupButtonActionPerformed
-        HomeGUI hGUI = new HomeGUI();
-        hGUI.setVisible(true);
-        this.setVisible(false);
+        
+        //declare objects
+        String email = registerEmail.getText();
+        String password = new String(registerPassword.getPassword());
+
+        //create objetcs
+        File outFile;
+        FileWriter fw;
+        BufferedWriter bw;
+        
+        //check if fields are empty
+        if (email.isEmpty() || password.isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Both email and password fields must be filled.", "Input Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        return; 
+        }   
+        
+        
+        //store info in info file
+        try{
+            outFile = new File("info.txt");
+            
+            fw = new FileWriter(outFile, true);
+            bw = new BufferedWriter(fw);
+            
+            bw.write(email + " : " + password);
+            bw.newLine();
+            bw.close();
+            
+        }
+        catch (IOException e){
+            System.out.println("Error"+e);
+        }
+        
+        
+        //redirect to login page
+        LoginGUI Login = new LoginGUI();
+        Login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_signupButtonActionPerformed
 

@@ -6,17 +6,15 @@ package ecotrackapp;
 
 /**
  *
- * @author sohei
+ * @author cosmy
  */
-import javax.swing.*;
-
-
 public class EcoTrackApp {
+
+
     public static void main(String[] args) {
-        HomeGUI homeGUI = new HomeGUI(); 
-        LoginGUI logGUI = new LoginGUI();
-        logGUI.setVisible(true);
         
+        LoginGUI Login = new LoginGUI();
+        Login.setVisible(true);
         
     }
     
