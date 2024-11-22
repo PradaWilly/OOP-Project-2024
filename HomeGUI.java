@@ -13,11 +13,15 @@ public class HomeGUI extends javax.swing.JFrame {
     /**
      * Creates new form EnergyCalculatorGUI
      */
-    
+    private int run;
 
     
+    SustainTips myTips;
     public HomeGUI() {
         initComponents();
+        run = 1;    
+        myTips =  new SustainTips();
+        loopTips();
     }
     
     
@@ -37,6 +41,9 @@ public class HomeGUI extends javax.swing.JFrame {
         calculatorSection = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         homeIconLbl = new javax.swing.JLabel();
+        tipsLbl = new javax.swing.JLabel();
+        tipsSlide = new javax.swing.JSlider();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EcoTrack");
@@ -91,33 +98,45 @@ public class HomeGUI extends javax.swing.JFrame {
 
         homeIconLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ecotrackapp/EcoTrackIcon (2).png"))); // NOI18N
 
+        tipsSlide.setValue(0);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(homeSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(homeTextArea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(160, 160, 160)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(homeSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(calculatorSection, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(surveySectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(homeIconLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tipsLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(168, 168, 168)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(homeIconLbl)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(calculatorSection, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(surveySectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(homeTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(306, 306, 306)
+                        .addComponent(tipsSlide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,37 +146,63 @@ public class HomeGUI extends javax.swing.JFrame {
                     .addComponent(calculatorSection, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                     .addComponent(surveySectionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(homeSectionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(homeIconLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(homeTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tipsLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                        .addComponent(tipsSlide, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addGap(9, 9, 9)
+                        .addComponent(homeTextArea, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void homeSectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeSectionBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_homeSectionBtnActionPerformed
-
+    
+    private void loopTips(){
+        while(run == 1){
+            //tipsSlide.setValue(50);
+            if(tipsSlide.getValue() < 20){
+                tipsLbl.setText(myTips.getTips()[1]);
+                System.out.println(tipsSlide.getValue());
+            }
+            /*if(tipsSlide.getValue() < 40 ){
+                tipsLbl.setText(myTips.getTips()[1]);
+            }
+            if(tipsSlide.getValue() < 60){
+                tipsLbl.setText(myTips.getTips()[2]);
+            }
+            if(tipsSlide.getValue() < 80){
+                tipsLbl.setText(myTips.getTips()[3]);
+            }
+            if(tipsSlide.getValue() < 100){
+                tipsLbl.setText(myTips.getTips()[4]);
+            }*/
+            //tipsSlide.setValue(+1);
+            run = 0;
+        }
+                
+    }
+    
     private void surveySectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surveySectionBtnActionPerformed
         // TODO add your handling code here:
         ThisSurveyGUI surveyGUI = new ThisSurveyGUI();
         surveyGUI.setVisible(true);
-         this.setVisible(false);
-         this.dispose();
-        
-    }//GEN-LAST:event_surveySectionBtnActionPerformed
+        this.setVisible(false);
+        this.dispose();
 
+    }//GEN-LAST:event_surveySectionBtnActionPerformed
+    
+    
     private void calculatorSectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculatorSectionActionPerformed
         EnergyCalculatorGUI ec = new EnergyCalculatorGUI();
         this.setVisible(false);
@@ -165,6 +210,10 @@ public class HomeGUI extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_calculatorSectionActionPerformed
 
+    private void homeSectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeSectionBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_homeSectionBtnActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -186,6 +235,9 @@ public class HomeGUI extends javax.swing.JFrame {
     private javax.swing.JTextArea homeTextArea;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton surveySectionBtn;
+    private javax.swing.JLabel tipsLbl;
+    private javax.swing.JSlider tipsSlide;
     // End of variables declaration//GEN-END:variables
 }

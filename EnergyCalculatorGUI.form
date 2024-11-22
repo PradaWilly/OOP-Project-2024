@@ -42,43 +42,53 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="ecotrackIconLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" pref="472" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" pref="472" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="ecotrackIconLbl" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="powerRatingInput" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="appliNameInput" alignment="0" min="-2" pref="199" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="displayAppsBtn1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Component id="hoursUsedInput" min="-2" pref="195" max="-2" attributes="0"/>
-                  <Component id="hoursUsedLabel" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="addApplicationBtn" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="powerRateTf" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="appNameTf" alignment="0" min="-2" pref="199" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="hoursUsedTf" min="-2" pref="195" max="-2" attributes="0"/>
+                          <Component id="hoursUsedLabel" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="addApplicationBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="displayAppsBtn" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="electricRateTf" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
+                          <Component id="electricRateLbl" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="269" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                              <Component id="calculateCostsBtn" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="electricRateTf" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
-                  <Component id="electricRateLbl" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="269" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                      <Component id="calculateMonthlyBtn" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,16 +100,17 @@
                   <Component id="homeSectionBtn" alignment="0" max="32767" attributes="0"/>
                   <Component id="surveySectionBtn" max="32767" attributes="0"/>
               </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="179" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="ecotrackIconLbl" min="-2" pref="137" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -107,11 +118,11 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="appliNameInput" min="-2" max="-2" attributes="0"/>
+                      <Component id="appNameTf" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="powerRatingInput" min="-2" max="-2" attributes="0"/>
+                      <Component id="powerRateTf" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -125,16 +136,21 @@
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Component id="electricRateTf" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="calculateMonthlyBtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="calculateCostsBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="hoursUsedLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Component id="hoursUsedInput" min="-2" max="-2" attributes="0"/>
+                      <Component id="hoursUsedTf" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Component id="addApplicationBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="addApplicationBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="displayAppsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="displayAppsBtn1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -142,7 +158,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="powerRatingInput">
+    <Component class="javax.swing.JTextField" name="powerRateTf">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -153,7 +169,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="powerRatingInputActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="powerRateTfActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hoursUsedLabel">
@@ -168,7 +184,7 @@
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="hoursUsedInput">
+    <Component class="javax.swing.JTextField" name="hoursUsedTf">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -179,7 +195,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hoursUsedInputActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hoursUsedTfActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -208,7 +224,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Household Application Name:"/>
+        <Property name="text" type="java.lang.String" value="Household Appliance Name:"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
     </Component>
@@ -256,7 +272,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="surveySectionBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="appliNameInput">
+    <Component class="javax.swing.JTextField" name="appNameTf">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -267,7 +283,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appliNameInputActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appNameTfActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="calculatorSectionBtn">
@@ -300,16 +316,16 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Power Rating of the Household Application(KW-killowatts):"/>
+        <Property name="text" type="java.lang.String" value="Power Rating of the Household Appliance(W-watts):"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="calculateMonthlyBtn">
+    <Component class="javax.swing.JButton" name="calculateCostsBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Calculate "/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculateMonthlyBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculateCostsBtnActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -326,7 +342,7 @@
               <Font name="Calibri" size="14" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="After you have added all applications and  &#xa;are happy with your entries, please &#xa;enter the rate at which you are charged for&#xa; you electricity and click calculate. If you do &#xa;not know the exact rate enter an estimate."/>
+            <Property name="text" type="java.lang.String" value="After you have added all appliances you use&#xa;and  are happy with your entries, please &#xa;enter the rate at which you are charged for&#xa;you electricity and click calculate. If you do &#xa;not know the exact rate enter an estimate."/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                 <BevelBorder>
@@ -373,6 +389,22 @@
           <Image iconType="3" name="/ecotrackapp/EcoTrackIcon2.png"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="displayAppsBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Display Appliances Entered"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="displayAppsBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="displayAppsBtn1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Display Energy Consumption(Daily&amp;Monthly)"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="displayAppsBtn1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
