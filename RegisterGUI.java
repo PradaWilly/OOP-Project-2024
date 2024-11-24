@@ -30,6 +30,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         EcoReg = new javax.swing.JLabel();
         TrackReg = new javax.swing.JLabel();
+        showPassReg = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("REGISTER");
@@ -82,26 +83,27 @@ public class RegisterGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(69, 69, 69)
-                .addComponent(EcoReg)
-                .addContainerGap(139, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(62, 62, 62)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TrackReg)
-                    .addContainerGap(62, Short.MAX_VALUE)))
+                    .addComponent(EcoReg))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(120, 120, 120)
+                .addGap(108, 108, 108)
                 .addComponent(EcoReg, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(TrackReg)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(188, 188, 188)
-                    .addComponent(TrackReg)
-                    .addContainerGap(189, Short.MAX_VALUE)))
         );
+
+        showPassReg.setText("Show Password");
+        showPassReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showPassRegActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,11 +113,6 @@ public class RegisterGUI extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(registerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(registerEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(88, 88, 88))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(signupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(148, 148, 148))
@@ -127,7 +124,14 @@ public class RegisterGUI extends javax.swing.JFrame {
                         .addGap(157, 157, 157))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(registerRegisterLabel)
-                        .addGap(132, 132, 132))))
+                        .addGap(132, 132, 132))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(showPassReg)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(registerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(registerEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(88, 88, 88))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,9 +146,11 @@ public class RegisterGUI extends javax.swing.JFrame {
                 .addComponent(registerPasswordLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(registerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(showPassReg, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
                 .addComponent(signupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -161,7 +167,7 @@ public class RegisterGUI extends javax.swing.JFrame {
 
     private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupButtonActionPerformed
         
-        //declare objects
+       //get email and passwword from fiels
         String email = registerEmail.getText();
         String password = new String(registerPassword.getPassword());
 
@@ -172,15 +178,20 @@ public class RegisterGUI extends javax.swing.JFrame {
         
         //check if fields are empty
         if (email.isEmpty() || password.isEmpty()) {
-        javax.swing.JOptionPane.showMessageDialog(this, "Both email and password fields must be filled.", "Input Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        javax.swing.JOptionPane.showMessageDialog(null, "Both email and password fields must be filled.");
         return; 
         }   
         
+        //Message if email format isnt valid
+        if (!isValidEmail(email)) {
+            javax.swing.JOptionPane.showMessageDialog(null, "Please use a real email adress.");
+            return; 
+        }
+ 
         
         //store info in info file
         try{
-            outFile = new File("info.txt");
-            
+            outFile = new File("info.txt");          
             fw = new FileWriter(outFile, true);
             bw = new BufferedWriter(fw);
             
@@ -192,7 +203,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         catch (IOException e){
             System.out.println("Error"+e);
         }
-        
+                    
         
         //redirect to login page
         LoginGUI Login = new LoginGUI();
@@ -200,6 +211,24 @@ public class RegisterGUI extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_signupButtonActionPerformed
 
+    private void showPassRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPassRegActionPerformed
+        if (showPassReg.isSelected()){
+            registerPassword.setEchoChar((char)0);
+        }else{
+            registerPassword.setEchoChar('•');
+        }
+        
+    }//GEN-LAST:event_showPassRegActionPerformed
+       
+        //checks if email format is valid
+    private boolean isValidEmail(String email) {
+        String emailRegex = "^[a-z0-9._]+@[a-z0-9]+\\.[a-z]{2,3}$";
+        return email.matches(emailRegex);
+    }
+    
+             
+   
+        
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -211,6 +240,7 @@ public class RegisterGUI extends javax.swing.JFrame {
     private javax.swing.JPasswordField registerPassword;
     private javax.swing.JLabel registerPasswordLabel;
     private javax.swing.JLabel registerRegisterLabel;
+    private javax.swing.JToggleButton showPassReg;
     private javax.swing.JButton signupButton;
     // End of variables declaration//GEN-END:variables
 }
