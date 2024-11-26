@@ -31,6 +31,8 @@ public class RegisterGUI extends javax.swing.JFrame {
         EcoReg = new javax.swing.JLabel();
         TrackReg = new javax.swing.JLabel();
         showPassReg = new javax.swing.JToggleButton();
+        alreadyUser = new javax.swing.JLabel();
+        backToLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("REGISTER");
@@ -105,17 +107,24 @@ public class RegisterGUI extends javax.swing.JFrame {
             }
         });
 
+        alreadyUser.setText("Already a user ?");
+
+        backToLogin.setForeground(new java.awt.Color(102, 102, 255));
+        backToLogin.setText("LOGIN");
+        backToLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backToLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                .addGap(135, 135, 135)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(signupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(148, 148, 148))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(registerEmailLabel)
                         .addGap(176, 176, 176))
@@ -131,7 +140,16 @@ public class RegisterGUI extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(registerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(registerEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(88, 88, 88))))
+                        .addGap(88, 88, 88))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(signupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(148, 148, 148))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(alreadyUser)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(backToLogin)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +168,11 @@ public class RegisterGUI extends javax.swing.JFrame {
                 .addComponent(showPassReg, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(signupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(alreadyUser)
+                    .addComponent(backToLogin))
+                .addContainerGap(75, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -219,6 +241,12 @@ public class RegisterGUI extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_showPassRegActionPerformed
+
+    private void backToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToLoginActionPerformed
+        LoginGUI Login = new LoginGUI();
+        Login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backToLoginActionPerformed
        
         //checks if email format is valid
     private boolean isValidEmail(String email) {
@@ -234,6 +262,8 @@ public class RegisterGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel EcoReg;
     private javax.swing.JLabel TrackReg;
+    private javax.swing.JLabel alreadyUser;
+    private javax.swing.JButton backToLogin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField registerEmail;
     private javax.swing.JLabel registerEmailLabel;

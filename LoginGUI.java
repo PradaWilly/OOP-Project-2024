@@ -80,8 +80,8 @@ public class LoginGUI extends javax.swing.JFrame {
         getContentPane().add(loginEmailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 110, -1, -1));
 
         noAccount.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        noAccount.setText("I don't have an account");
-        getContentPane().add(noAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 146, -1));
+        noAccount.setText("Need an account ?");
+        getContentPane().add(noAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, 100, -1));
 
         showPassLog.setText("Show Password");
         showPassLog.addActionListener(new java.awt.event.ActionListener() {
@@ -93,13 +93,13 @@ public class LoginGUI extends javax.swing.JFrame {
 
         loginSignupButton.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         loginSignupButton.setForeground(new java.awt.Color(102, 102, 255));
-        loginSignupButton.setText("Sign up");
+        loginSignupButton.setText("SIGN UP");
         loginSignupButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginSignupButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(loginSignupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, -1, -1));
+        getContentPane().add(loginSignupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 102));
         jPanel1.setPreferredSize(new java.awt.Dimension(350, 500));
