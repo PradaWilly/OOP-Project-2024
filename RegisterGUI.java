@@ -21,12 +21,12 @@ public class RegisterGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        emailSep = new javax.swing.JSeparator();
+        passSeparaty = new javax.swing.JSeparator();
         registerEmail = new javax.swing.JTextField();
         signupButton = new javax.swing.JButton();
         registerPassword = new javax.swing.JPasswordField();
-        registerPasswordLabel = new javax.swing.JLabel();
         registerRegisterLabel = new javax.swing.JLabel();
-        registerEmailLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         EcoReg = new javax.swing.JLabel();
         TrackReg = new javax.swing.JLabel();
@@ -37,12 +37,35 @@ public class RegisterGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("REGISTER");
         setLocation(new java.awt.Point(360, 160));
+        setMaximumSize(new java.awt.Dimension(800, 500));
+        setMinimumSize(new java.awt.Dimension(800, 500));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        emailSep.setForeground(new java.awt.Color(102, 255, 102));
+        getContentPane().add(emailSep, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 200, 10));
+
+        passSeparaty.setForeground(new java.awt.Color(102, 255, 102));
+        getContentPane().add(passSeparaty, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 200, 10));
+
+        registerEmail.setBackground(new java.awt.Color(242, 242, 242));
+        registerEmail.setText("Email ");
+        registerEmail.setBorder(null);
+        registerEmail.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                registerEmailFocusGained(evt);
+            }
+        });
+        registerEmail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                registerEmailMouseClicked(evt);
+            }
+        });
         registerEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registerEmailActionPerformed(evt);
             }
         });
+        getContentPane().add(registerEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 220, 40));
 
         signupButton.setBackground(new java.awt.Color(102, 255, 102));
         signupButton.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
@@ -53,22 +76,27 @@ public class RegisterGUI extends javax.swing.JFrame {
                 signupButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(signupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 119, 38));
 
+        registerPassword.setBackground(new java.awt.Color(242, 242, 242));
+        registerPassword.setText("XXXXXXXXX");
+        registerPassword.setBorder(null);
+        registerPassword.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                registerPasswordFocusGained(evt);
+            }
+        });
         registerPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registerPasswordActionPerformed(evt);
             }
         });
-
-        registerPasswordLabel.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
-        registerPasswordLabel.setText("Password");
+        getContentPane().add(registerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 207, 220, 40));
 
         registerRegisterLabel.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         registerRegisterLabel.setForeground(new java.awt.Color(102, 255, 102));
         registerRegisterLabel.setText("REGISTER");
-
-        registerEmailLabel.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
-        registerEmailLabel.setText("Email");
+        getContentPane().add(registerRegisterLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 21, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 102));
         jPanel1.setPreferredSize(new java.awt.Dimension(300, 500));
@@ -97,8 +125,10 @@ public class RegisterGUI extends javax.swing.JFrame {
                 .addComponent(EcoReg, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(TrackReg)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, -1));
 
         showPassReg.setText("Show Password");
         showPassReg.addActionListener(new java.awt.event.ActionListener() {
@@ -106,8 +136,11 @@ public class RegisterGUI extends javax.swing.JFrame {
                 showPassRegActionPerformed(evt);
             }
         });
+        getContentPane().add(showPassReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, -1, -1));
 
+        alreadyUser.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         alreadyUser.setText("Already a user ?");
+        getContentPane().add(alreadyUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, -1, -1));
 
         backToLogin.setForeground(new java.awt.Color(102, 102, 255));
         backToLogin.setText("LOGIN");
@@ -116,75 +149,17 @@ public class RegisterGUI extends javax.swing.JFrame {
                 backToLoginActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(registerEmailLabel)
-                        .addGap(176, 176, 176))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(registerPasswordLabel)
-                        .addGap(157, 157, 157))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(registerRegisterLabel)
-                        .addGap(132, 132, 132))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(showPassReg)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(registerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(registerEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(88, 88, 88))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(signupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(148, 148, 148))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(alreadyUser)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(backToLogin)
-                        .addContainerGap())))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(registerRegisterLabel)
-                .addGap(47, 47, 47)
-                .addComponent(registerEmailLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(registerEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(registerPasswordLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(registerPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(showPassReg, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(signupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(alreadyUser)
-                    .addComponent(backToLogin))
-                .addContainerGap(75, Short.MAX_VALUE))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(backToLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerEmailActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_registerEmailActionPerformed
 
     private void registerPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerPasswordActionPerformed
-        // TODO add your handling code here:
+       // TODO add your handling code here:
     }//GEN-LAST:event_registerPasswordActionPerformed
 
     private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupButtonActionPerformed
@@ -247,6 +222,18 @@ public class RegisterGUI extends javax.swing.JFrame {
         Login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backToLoginActionPerformed
+
+    private void registerEmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_registerEmailFocusGained
+        
+    }//GEN-LAST:event_registerEmailFocusGained
+
+    private void registerPasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_registerPasswordFocusGained
+        registerPassword.setText("");
+    }//GEN-LAST:event_registerPasswordFocusGained
+
+    private void registerEmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerEmailMouseClicked
+        registerEmail.setText("");
+    }//GEN-LAST:event_registerEmailMouseClicked
        
         //checks if email format is valid
     private boolean isValidEmail(String email) {
@@ -264,11 +251,11 @@ public class RegisterGUI extends javax.swing.JFrame {
     private javax.swing.JLabel TrackReg;
     private javax.swing.JLabel alreadyUser;
     private javax.swing.JButton backToLogin;
+    private javax.swing.JSeparator emailSep;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator passSeparaty;
     private javax.swing.JTextField registerEmail;
-    private javax.swing.JLabel registerEmailLabel;
     private javax.swing.JPasswordField registerPassword;
-    private javax.swing.JLabel registerPasswordLabel;
     private javax.swing.JLabel registerRegisterLabel;
     private javax.swing.JToggleButton showPassReg;
     private javax.swing.JButton signupButton;
