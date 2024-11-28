@@ -9,22 +9,21 @@ package ecotrackapp;
  * @author sohei
  */
 public class EnergyCalculator {
+    //declare variables
     private double powerRating;
     private double hoursUsed;
     private String name;
     
-
+    //overloaed constructer
     public EnergyCalculator(double powerRating, double hoursUsed) {
         this.powerRating = powerRating;
         this.hoursUsed = hoursUsed;
     }
-    
+    //default constructor
     public EnergyCalculator(){
         powerRating = 0;
         hoursUsed = 0;
-       
         name = " ";
-
     }
     
 
