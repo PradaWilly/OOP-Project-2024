@@ -28,43 +28,42 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="homeSectionBtn" min="-2" pref="234" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="387" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="160" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="homeSectionBtn" min="-2" pref="234" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="calculatorSectionBtn" min="-2" pref="279" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="surveySectionBtn" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="qs3Lbl" alignment="0" pref="538" max="32767" attributes="0"/>
-                  <Component id="qs2Lbl" alignment="1" max="32767" attributes="0"/>
-                  <Component id="qs1Lbl" alignment="0" max="32767" attributes="0"/>
-                  <Component id="qs2Tf" alignment="0" min="-2" pref="500" max="-2" attributes="0"/>
-                  <Component id="qs1Tf" alignment="0" min="-2" pref="500" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="resetBtn" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                          <Component id="changeBTN" min="-2" pref="120" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="submitBtn" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="129" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="qs1Tf" min="-2" pref="500" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="qs3Lbl" alignment="0" pref="538" max="32767" attributes="0"/>
+                              <Component id="qs2Lbl" alignment="1" max="32767" attributes="0"/>
+                              <Component id="qs2Tf" alignment="0" min="-2" pref="500" max="-2" attributes="0"/>
+                              <Component id="qs1Lbl" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="resetBtn" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="submitBtn" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="displayBtn" min="-2" pref="106" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="qs3Tf" alignment="0" min="-2" pref="498" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jLabel1" min="-2" pref="498" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="qs3Tf" alignment="0" min="-2" pref="498" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -76,13 +75,13 @@
                   <Component id="calculatorSectionBtn" alignment="1" max="32767" attributes="0"/>
                   <Component id="surveySectionBtn" alignment="1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="104" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="qs1Lbl" min="-2" pref="34" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-              <Component id="qs1Tf" min="-2" pref="34" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="qs1Tf" min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="qs2Lbl" min="-2" pref="30" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="qs2Tf" min="-2" pref="34" max="-2" attributes="0"/>
@@ -93,8 +92,8 @@
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="resetBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="changeBTN" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="submitBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="displayBtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
           </Group>
@@ -124,18 +123,6 @@
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Question one is here?"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="qs1Tf">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder roundedCorners="true" thickness="3">
-              <Color PropertyName="color" blue="66" green="ff" red="66" type="rgb"/>
-            </LineBorder>
-          </Border>
-        </Property>
-        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="qs3Lbl">
@@ -253,17 +240,35 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeSectionBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="changeBTN">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Next Questions"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/ecotrackapp/EcoTrackIcon (2).png"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="qs1Tf">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder roundedCorners="true" thickness="3">
+              <Color PropertyName="color" blue="66" green="ff" red="66" type="rgb"/>
+            </LineBorder>
+          </Border>
+        </Property>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="qs1TfActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="displayBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="display"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="displayBtnActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
