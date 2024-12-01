@@ -55,7 +55,7 @@ public class HomeGUI extends javax.swing.JFrame{
         setResizable(false);
 
         homeTextArea.setEditable(false);
-        homeTextArea.setBackground(new java.awt.Color(102, 255, 102));
+        homeTextArea.setBackground(new java.awt.Color(153, 255, 153));
         homeTextArea.setColumns(20);
         homeTextArea.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         homeTextArea.setRows(5);
@@ -109,7 +109,7 @@ public class HomeGUI extends javax.swing.JFrame{
         tipsSlide.setEnabled(false);
 
         changeTipsBtn.setBackground(new java.awt.Color(204, 255, 204));
-        changeTipsBtn.setText("Cycle Tips");
+        changeTipsBtn.setText("Change Tip");
         changeTipsBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         changeTipsBtn.setOpaque(true);
         changeTipsBtn.addActionListener(new java.awt.event.ActionListener() {

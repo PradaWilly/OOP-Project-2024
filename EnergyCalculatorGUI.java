@@ -71,8 +71,8 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
         if (appliance.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Sorry, there are no appliances to display.");
         } else {
-            for (int i = 0; i < appliance.size(); i++) {
-                JOptionPane.showMessageDialog(null, appliance.get(i).getDetails());
+            for (Appliances a:appliance){ 
+                JOptionPane.showMessageDialog(null, a.getDetails());
             }
         }
     }
@@ -82,12 +82,14 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
         if (appliance.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Sorry, there are no appliances to delete.");
         } else {
-            String searchTerm = JOptionPane.showInputDialog(null, "Enter Name of the appliance you want to delete.");
-            for (Appliances a:appliance){
-                if (a.getName().equalsIgnoreCase(searchTerm)) {
-                    appliance.remove(a);
-                    JOptionPane.showMessageDialog(null, "Appliance with name " + searchTerm + " has been successfully deleted.");
-                }
+                String searchTerm = JOptionPane.showInputDialog(null, "Enter Name of the appliance you want to delete.");
+                searchTerm = searchTerm.toLowerCase();
+               for (int i = 0; i < appliance.size(); i++) {
+                   if (appliance.get(i).getName().equalsIgnoreCase(searchTerm)){
+                        appliance.remove(i);
+                        JOptionPane.showMessageDialog(null, "Appliance with name " + searchTerm + " has been successfully deleted.");
+                    }
+                
             }
         }
     }
@@ -127,6 +129,7 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
         displayAppsBtn = new javax.swing.JButton();
         displayAppsBtn1 = new javax.swing.JButton();
         deleteBtn = new javax.swing.JButton();
+        userHelpBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EcoTrack");
@@ -157,7 +160,9 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
         jLabel4.setText("EcoTrack Energy Usage Calculator");
         jLabel4.setOpaque(true);
 
+        addApplicationBtn.setBackground(new java.awt.Color(153, 255, 153));
         addApplicationBtn.setText("Add Application");
+        addApplicationBtn.setOpaque(true);
         addApplicationBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addApplicationBtnActionPerformed(evt);
@@ -211,6 +216,7 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
         jLabel3.setText("Power Rating of the Household Appliance(W-watts):");
         jLabel3.setOpaque(true);
 
+        calculateCostsBtn.setBackground(new java.awt.Color(204, 255, 204));
         calculateCostsBtn.setText("Calculate ");
         calculateCostsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,6 +245,7 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
 
         ecotrackIconLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ecotrackapp/EcoTrackIcon2.png"))); // NOI18N
 
+        displayAppsBtn.setBackground(new java.awt.Color(153, 255, 153));
         displayAppsBtn.setText("Display Appliances Entered");
         displayAppsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,13 +253,16 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
             }
         });
 
-        displayAppsBtn1.setText("Display Energy Consumption(Daily&Monthly)");
+        displayAppsBtn1.setBackground(new java.awt.Color(204, 255, 204));
+        displayAppsBtn1.setText("Display Energy Consumption");
+        displayAppsBtn1.setOpaque(true);
         displayAppsBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 displayAppsBtn1ActionPerformed(evt);
             }
         });
 
+        deleteBtn.setBackground(new java.awt.Color(255, 153, 153));
         deleteBtn.setText("Delete Appliance");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,49 +270,32 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        userHelpBtn.setBackground(new java.awt.Color(255, 255, 204));
+        userHelpBtn.setText("How to Use the Calculator?");
+        userHelpBtn.setOpaque(true);
+        userHelpBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userHelpBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(homeSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(calculatorSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(surveySectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addComponent(jLabel1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ecotrackIconLbl)))
+                .addGap(31, 31, 31)
+                .addComponent(ecotrackIconLbl)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(displayAppsBtn1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3)
-                                .addComponent(powerRateTf, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(appNameTf, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(hoursUsedTf, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hoursUsedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(addApplicationBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(displayAppsBtn)))
+                        .addComponent(addApplicationBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(displayAppsBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(electricRateTf, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -311,11 +304,42 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
                                 .addComponent(calculateCostsBtn)))
-                        .addGap(24, 24, 24))))
+                        .addGap(24, 24, 24))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3)
+                                .addComponent(powerRateTf, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(appNameTf, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(hoursUsedTf, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hoursUsedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(540, 540, 540))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(userHelpBtn)
+                        .addGap(64, 64, 64)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addComponent(deleteBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(homeSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(calculatorSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(surveySectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(92, 92, 92)
+                                .addComponent(deleteBtn))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(displayAppsBtn1)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,14 +353,24 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
                         .addGap(25, 25, 25)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ecotrackIconLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addGap(14, 14, 14)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(ecotrackIconLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(userHelpBtn)
+                            .addComponent(jLabel4))
+                        .addGap(31, 31, 31)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                        .addComponent(electricRateLbl)
+                        .addGap(18, 18, 18)
+                        .addComponent(electricRateTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(calculateCostsBtn)
+                        .addGap(75, 75, 75))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(appNameTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -344,19 +378,7 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(powerRateTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(electricRateLbl)
                         .addGap(18, 18, 18)
-                        .addComponent(electricRateTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(calculateCostsBtn)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(hoursUsedLabel)
                         .addGap(18, 18, 18)
                         .addComponent(hoursUsedTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -364,9 +386,9 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(addApplicationBtn)
                             .addComponent(displayAppsBtn))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(displayAppsBtn1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(displayAppsBtn1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(deleteBtn)
                         .addGap(11, 11, 11))))
         );
@@ -454,6 +476,14 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         deleteAppliance();
     }//GEN-LAST:event_deleteBtnActionPerformed
+ 
+    private void userHelpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userHelpBtnActionPerformed
+        // TODO add your handling code here:
+        UserGuideGUI myGuide = new UserGuideGUI();
+      
+        
+        myGuide.setVisible(true); 
+    }//GEN-LAST:event_userHelpBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -490,5 +520,6 @@ public class EnergyCalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField powerRateTf;
     private javax.swing.JButton surveySectionBtn;
+    private javax.swing.JButton userHelpBtn;
     // End of variables declaration//GEN-END:variables
 }

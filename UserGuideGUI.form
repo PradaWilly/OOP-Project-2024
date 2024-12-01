@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="alwaysOnTop" type="boolean" value="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="step5_1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="step5Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="step4Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="step2_1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="step2Lbl" alignment="0" min="-2" pref="464" max="-2" attributes="0"/>
+                          <Component id="step3Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="step3_1Lbl" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="step1Lbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+          <Component id="seperateTitleS" alignment="1" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+              <Component id="titleLbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <Component id="titleLbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="seperateTitleS" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+              <Component id="step1Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="step2Lbl" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="step2_1Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="step3Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="step3_1Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="step4Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="step5Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="step5_1Lbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="step2Lbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="2. To display all the appliances you have added, click on the &quot;Display Appliances Button &quot;"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="step1Lbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="1. Put in an appliance&apos;s details then click add"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="step3Lbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="3. To delete an appliance, click on the delete button and enter the name of the appliance  "/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="step2_1Lbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="click on the &quot;Display Energy Consumption&quot; button."/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="step5Lbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="5. After you have added all the appliances that you use, put the value at which you are "/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="step3_1Lbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="you want to delete."/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="step4Lbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="4. If you want to see you energy consumption based on the appliances you have entered so "/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="step5_1Lbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="charged for electricity and click calculate."/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="titleLbl">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="ff" red="99" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="How to Use The Energy Consumption Calculator:"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="seperateTitleS">
+    </Component>
+  </SubComponents>
+</Form>

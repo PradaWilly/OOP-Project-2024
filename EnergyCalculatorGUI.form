@@ -28,54 +28,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="homeSectionBtn" min="-2" pref="287" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="calculatorSectionBtn" min="-2" pref="265" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="surveySectionBtn" min="-2" pref="274" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" pref="472" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="ecotrackIconLbl" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Component id="ecotrackIconLbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="displayAppsBtn1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="powerRateTf" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="appNameTf" alignment="0" min="-2" pref="199" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="hoursUsedTf" min="-2" pref="195" max="-2" attributes="0"/>
-                          <Component id="hoursUsedLabel" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="addApplicationBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="displayAppsBtn" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="addApplicationBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="displayAppsBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="electricRateTf" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
@@ -88,12 +54,53 @@
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="powerRateTf" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="appNameTf" alignment="0" min="-2" pref="199" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="hoursUsedTf" min="-2" pref="195" max="-2" attributes="0"/>
+                          <Component id="hoursUsedLabel" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="540" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="userHelpBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" pref="364" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-              <Component id="deleteBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="homeSectionBtn" min="-2" pref="275" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="calculatorSectionBtn" min="-2" pref="277" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="surveySectionBtn" min="-2" pref="274" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                              <Component id="deleteBtn" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="displayAppsBtn1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -111,16 +118,28 @@
                       <Component id="jLabel1" min="-2" pref="179" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="ecotrackIconLbl" min="-2" pref="137" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="ecotrackIconLbl" min="-2" pref="114" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="userHelpBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="120" max="-2" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <Component id="electricRateLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                      <Component id="electricRateTf" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="calculateCostsBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="appNameTf" min="-2" max="-2" attributes="0"/>
@@ -129,33 +148,17 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="powerRateTf" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane1" min="-2" pref="120" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="electricRateLbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                      <Component id="electricRateTf" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="calculateCostsBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
                       <Component id="hoursUsedLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Component id="hoursUsedTf" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="addApplicationBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="displayAppsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="displayAppsBtn1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="displayAppsBtn1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="deleteBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   </Group>
@@ -217,7 +220,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="addApplicationBtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="ff" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add Application"/>
+        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addApplicationBtnActionPerformed"/>
@@ -329,6 +336,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="calculateCostsBtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Calculate "/>
       </Properties>
       <Events>
@@ -399,6 +409,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="displayAppsBtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="ff" red="99" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Display Appliances Entered"/>
       </Properties>
       <Events>
@@ -407,7 +420,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="displayAppsBtn1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Display Energy Consumption(Daily&amp;Monthly)"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="cc" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Display Energy Consumption"/>
+        <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="displayAppsBtn1ActionPerformed"/>
@@ -415,10 +432,25 @@
     </Component>
     <Component class="javax.swing.JButton" name="deleteBtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete Appliance"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="userHelpBtn">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="How to Use the Calculator?"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userHelpBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
