@@ -20,15 +20,16 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
     Answers[] arr;
     //declare counter
     int count;
-    private final int submitCount ;
+    private int submitCount ;
     /**
      * Creates new form ThisSurveyGUI
      */
     public ThisSurveyGUI() {
     initComponents();
-    qs1Lbl.setText(OriginalQuestions.QUESTION1);
-    qs2Lbl.setText(OriginalQuestions.QUESTION2);
-    qs3Lbl.setText(OriginalQuestions.QUESTION3);
+    OriginalQuestions originalQuestions = new OriginalQuestions();
+    qs1Lbl.setText(originalQuestions.getQuestion4());
+    qs2Lbl.setText(originalQuestions.getQuestion5());
+    qs3Lbl.setText(originalQuestions.getQuestion6());
     
    
    
@@ -231,11 +232,11 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
 
     private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
         // TODO add your handling code here:
-    
-     // Reset labels to original questions
-    qs1Lbl.setText(OriginalQuestions.QUESTION1);
-    qs2Lbl.setText(OriginalQuestions.QUESTION2);
-    qs3Lbl.setText(OriginalQuestions.QUESTION3);
+OriginalQuestions originalQuestions = new OriginalQuestions();
+qs1Lbl.setText(originalQuestions.getQuestion4());
+qs2Lbl.setText(originalQuestions.getQuestion5());
+qs3Lbl.setText(originalQuestions.getQuestion6());
+
     }//GEN-LAST:event_resetBtnActionPerformed
     
     private void surveySectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surveySectionBtnActionPerformed
@@ -268,9 +269,9 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
         return; // Exit the method without submitting
     }
     if (submitCount >= 2) {
-        // If the submit button is pressed more than twice, show a warning and exit
+        // If submit button is pressed more than twicegive warning
         JOptionPane.showMessageDialog(null, "you can not submit more than once per question!", "Warning", javax.swing.JOptionPane.WARNING_MESSAGE);
-         return; // Exit the method without submitting
+         return; 
         
     }
     Answers a;
@@ -278,7 +279,7 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
     String answer1 = qs1Tf.getText();
     String answer2 = qs2Tf.getText();
     String answer3 = qs3Tf.getText();
-    // Populate the Answers object with data from the text fields
+    // Pfill ans objs with data from tfs
     a.setAnswer1(answer1);
     a.setAnswer2(answer2);
     a.setAnswer3(answer3);
@@ -286,13 +287,13 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
     //add object to array
     arr[count]= a;
     count++;
-    // Notify the user of successful submission
     JOptionPane.showMessageDialog(null, "Survey response submitted successfully!");
     } 
-    // Clear the text fields
+    // Clear text fields
     qs1Tf.setText("");
     qs2Tf.setText("");
     qs3Tf.setText("");
+    //change the questions on the label
     qs1Lbl.setText(surveyQuestions.getQuestion1());
     qs2Lbl.setText(surveyQuestions.getQuestion2());
     qs3Lbl.setText(surveyQuestions.getQuestion3());
@@ -306,9 +307,9 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
     // TODO add your handling code here:
     
     for(int i = 0; i<arr.length; i= i+1){
-        JOptionPane.showMessageDialog(null, "answer 1: "+arr[i].getAnswer1()+"\n answer 2: "+arr[i].getAnswer2()+"\n answer 3: "+arr[i].getAnswer3());
+        JOptionPane.showMessageDialog(null, "answer : "+arr[i].getAnswer1()+"\n answer : "+arr[i].getAnswer2()+"\n answer : "+arr[i].getAnswer3());
     }
-    JOptionPane.showMessageDialog(null,"thank you for taking our servey");
+    JOptionPane.showMessageDialog(null,"thank you for taking our survey");
     }//GEN-LAST:event_displayBtnActionPerformed
 
     /**
