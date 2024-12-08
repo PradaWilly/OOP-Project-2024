@@ -9,15 +9,16 @@ package ecotrackapp;
  * @author Ross
  */
 public class SurveyQuestions {
- public String question1;
+
+    public String question1;
     public String question2;
     public String question3;
 
     // Constructor with default questions
     public SurveyQuestions() {
-        this.question1 = "do you know which appliances use the most energy?";
-        this.question2 = "Have you ever received advice or tips on saving energy? ";
-        this.question3 = "If so, what were they";
+        this.question1 = "1.Do you know which appliances use the most energy?";
+        this.question2 = "2.Have you ever received advice or tips on saving energy? ";
+        this.question3 = "3.If so, what were they?";
     }
 
     // Getters

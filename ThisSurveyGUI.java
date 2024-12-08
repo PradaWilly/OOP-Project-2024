@@ -6,37 +6,34 @@ package ecotrackapp;
 
 import javax.swing.JOptionPane;
 
-
-
-
 /**
  *
  * @author Ross P
  */
 public class ThisSurveyGUI extends javax.swing.JFrame {
-private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create instance
-    
-     //declare array of objects
+
+    private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create instance
+
+    //declare array of objects
     Answers[] arr;
     //declare counter
     int count;
-    private int submitCount ;
+    private int submitCount;
+
     /**
      * Creates new form ThisSurveyGUI
      */
     public ThisSurveyGUI() {
-    initComponents();
-    OriginalQuestions originalQuestions = new OriginalQuestions();
-    qs1Lbl.setText(originalQuestions.getQuestion4());
-    qs2Lbl.setText(originalQuestions.getQuestion5());
-    qs3Lbl.setText(originalQuestions.getQuestion6());
-    
-   
-   
-   //create array
-    arr = new Answers[2];
-    count = 0 ;
-    submitCount=0;
+        initComponents();
+        OriginalQuestions originalQuestions = new OriginalQuestions();
+        qs1Lbl.setText(originalQuestions.getQuestion4());
+        qs2Lbl.setText(originalQuestions.getQuestion5());
+        qs3Lbl.setText(originalQuestions.getQuestion6());
+
+        //create array
+        arr = new Answers[2];
+        count = 0;
+        submitCount = 0;
     }
 
     /**
@@ -149,7 +146,7 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
             }
         });
 
-        displayBtn.setText("display");
+        displayBtn.setText("Display");
         displayBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 displayBtnActionPerformed(evt);
@@ -161,34 +158,33 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(homeSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(calculatorSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(surveySectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(qs1Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(qs3Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+                        .addComponent(qs2Lbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(qs2Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(qs1Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(resetBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(94, 94, 94)
+                                .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(displayBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(qs3Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(homeSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(calculatorSectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(surveySectionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 129, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(qs1Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(qs3Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
-                                .addComponent(qs2Lbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(qs2Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(qs1Lbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(resetBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(95, 95, 95)
-                                        .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(displayBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(qs3Tf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(125, 125, 125))))
+                        .addGap(98, 98, 98)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(125, 125, 125))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,17 +207,17 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
                 .addComponent(qs3Lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(qs3Tf, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(resetBtn)
+                    .addComponent(displayBtn)
                     .addComponent(submitBtn)
-                    .addComponent(displayBtn))
-                .addGap(31, 31, 31))
+                    .addComponent(resetBtn))
+                .addGap(60, 60, 60))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   
+
     private void qs2TfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qs2TfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_qs2TfActionPerformed
@@ -232,71 +228,74 @@ private final SurveyQuestions surveyQuestions = new SurveyQuestions(); // Create
 
     private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
         // TODO add your handling code here:
-OriginalQuestions originalQuestions = new OriginalQuestions();
-qs1Lbl.setText(originalQuestions.getQuestion4());
-qs2Lbl.setText(originalQuestions.getQuestion5());
-qs3Lbl.setText(originalQuestions.getQuestion6());
+        OriginalQuestions originalQuestions = new OriginalQuestions();
+        qs1Lbl.setText(originalQuestions.getQuestion4());
+        qs2Lbl.setText(originalQuestions.getQuestion5());
+        qs3Lbl.setText(originalQuestions.getQuestion6());
 
     }//GEN-LAST:event_resetBtnActionPerformed
-    
+
     private void surveySectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surveySectionBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_surveySectionBtnActionPerformed
 
     private void calculatorSectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculatorSectionBtnActionPerformed
         // TODO add your handling code here:
-      
-        
-      
+
+        EnergyCalculatorGUI myCalc = new EnergyCalculatorGUI();
+        myCalc.setVisible(true);
+        this.dispose();
+
     }//GEN-LAST:event_calculatorSectionBtnActionPerformed
 
     private void homeSectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeSectionBtnActionPerformed
         // TODO add your handling code here:
-      
-     
-        
+
+        HomeGUI myHome = new HomeGUI();
+        myHome.setVisible(true);
+        this.dispose();
+
 
     }//GEN-LAST:event_homeSectionBtnActionPerformed
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
-    if (qs1Tf.getText().equals("") || 
-        qs2Tf.getText().equals("")
-        ) {
-        
-        // Show a warning message
-        JOptionPane.showMessageDialog(null, "All questions must be answered before submission!", "Warning", javax.swing.JOptionPane.WARNING_MESSAGE);
-        
-        return; // Exit the method without submitting
-    }
-    if (submitCount >= 2) {
-        // If submit button is pressed more than twicegive warning
-        JOptionPane.showMessageDialog(null, "you can not submit more than once per question!", "Warning", javax.swing.JOptionPane.WARNING_MESSAGE);
-         return; 
-        
-    }
-    Answers a;
-    a = new Answers();
-    String answer1 = qs1Tf.getText();
-    String answer2 = qs2Tf.getText();
-    String answer3 = qs3Tf.getText();
-    // Pfill ans objs with data from tfs
-    a.setAnswer1(answer1);
-    a.setAnswer2(answer2);
-    a.setAnswer3(answer3);
-     if (count < arr.length) {
-    //add object to array
-    arr[count]= a;
-    count++;
-    JOptionPane.showMessageDialog(null, "Survey response submitted successfully!");
-    } 
-    // Clear text fields
-    qs1Tf.setText("");
-    qs2Tf.setText("");
-    qs3Tf.setText("");
-    //change the questions on the label
-    qs1Lbl.setText(surveyQuestions.getQuestion1());
-    qs2Lbl.setText(surveyQuestions.getQuestion2());
-    qs3Lbl.setText(surveyQuestions.getQuestion3());
+        if (qs1Tf.getText().equals("")
+                || qs2Tf.getText().equals("")) {
+
+            // Show a warning message
+            JOptionPane.showMessageDialog(null, "All questions must be answered before submission!", "Warning", javax.swing.JOptionPane.WARNING_MESSAGE);
+
+            return; // Exit the method without submitting
+        }
+        if (submitCount >= 2) {
+            // If submit button is pressed more than twicegive warning
+            JOptionPane.showMessageDialog(null, "You can not submit more than once per question!", "Warning", javax.swing.JOptionPane.WARNING_MESSAGE);
+            return;
+
+        }
+        Answers a;
+        a = new Answers();
+        String answer1 = qs1Tf.getText();
+        String answer2 = qs2Tf.getText();
+        String answer3 = qs3Tf.getText();
+        // Pfill ans objs with data from tfs
+        a.setAnswer1(answer1);
+        a.setAnswer2(answer2);
+        a.setAnswer3(answer3);
+        if (count < arr.length) {
+            //add object to array
+            arr[count] = a;
+            count++;
+            JOptionPane.showMessageDialog(null, "Survey response submitted successfully!");
+        }
+        // Clear text fields
+        qs1Tf.setText("");
+        qs2Tf.setText("");
+        qs3Tf.setText("");
+        //change the questions on the label
+        qs1Lbl.setText(surveyQuestions.getQuestion1());
+        qs2Lbl.setText(surveyQuestions.getQuestion2());
+        qs3Lbl.setText(surveyQuestions.getQuestion3());
     }//GEN-LAST:event_submitBtnActionPerformed
 
     private void qs1TfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qs1TfActionPerformed
@@ -304,12 +303,16 @@ qs3Lbl.setText(originalQuestions.getQuestion6());
     }//GEN-LAST:event_qs1TfActionPerformed
 
     private void displayBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayBtnActionPerformed
-    // TODO add your handling code here:
-    
-    for(int i = 0; i<arr.length; i= i+1){
-        JOptionPane.showMessageDialog(null, "answer : "+arr[i].getAnswer1()+"\n answer : "+arr[i].getAnswer2()+"\n answer : "+arr[i].getAnswer3());
-    }
-    JOptionPane.showMessageDialog(null,"thank you for taking our survey");
+        // TODO add your handling code here:
+
+        for (int i = 0; i < arr.length; i = i + 1) {
+            try {
+                JOptionPane.showMessageDialog(null, "answer : " + arr[i].getAnswer1() + "\n answer : " + arr[i].getAnswer2() + "\n answer : " + arr[i].getAnswer3());
+            } catch (Exception e) {
+                System.out.println("Error:" + e);
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Thank you for taking our survey!");
     }//GEN-LAST:event_displayBtnActionPerformed
 
     /**

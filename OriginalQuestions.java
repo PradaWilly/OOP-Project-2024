@@ -9,14 +9,15 @@ package ecotrackapp;
  * @author Ross
  */
 public class OriginalQuestions {
-   public String question4;
+
+    public String question4;
     public String question5;
     public String question6;
 
-     public OriginalQuestions() {
-        this.question4 = "how often do you use your washing mashine?";
-        this.question5 = "what appliance do you use most at home? ";
-        this.question6 = "do you switch off your appliances when you dont use them?";
+    public OriginalQuestions() {
+        this.question4 = "How often do you use your washing mashine?";
+        this.question5 = "What appliance do you use most at home? ";
+        this.question6 = "Do you switch off your appliances when you dont use them?";
     }
 
     public String getQuestion4() {

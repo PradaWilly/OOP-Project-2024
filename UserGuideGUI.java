@@ -39,7 +39,6 @@ public class UserGuideGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
-        setResizable(false);
 
         step2Lbl.setBackground(new java.awt.Color(204, 255, 204));
         step2Lbl.setText("2. To display all the appliances you have added, click on the \"Display Appliances Button \"");

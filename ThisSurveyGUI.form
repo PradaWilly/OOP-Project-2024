@@ -28,42 +28,40 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="homeSectionBtn" min="-2" pref="258" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="calculatorSectionBtn" min="-2" pref="283" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="surveySectionBtn" min="-2" pref="291" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="homeSectionBtn" min="-2" pref="234" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="calculatorSectionBtn" min="-2" pref="279" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="surveySectionBtn" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="129" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="qs1Tf" min="-2" pref="500" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="qs3Lbl" alignment="0" pref="538" max="32767" attributes="0"/>
-                              <Component id="qs2Lbl" alignment="1" max="32767" attributes="0"/>
-                              <Component id="qs2Tf" alignment="0" min="-2" pref="500" max="-2" attributes="0"/>
-                              <Component id="qs1Lbl" alignment="0" max="32767" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="resetBtn" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="submitBtn" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="displayBtn" min="-2" pref="106" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="qs3Tf" alignment="0" min="-2" pref="498" max="-2" attributes="0"/>
-                              </Group>
+                  <Component id="qs1Tf" min="-2" pref="500" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="qs3Lbl" alignment="0" pref="538" max="32767" attributes="0"/>
+                      <Component id="qs2Lbl" alignment="1" max="32767" attributes="0"/>
+                      <Component id="qs2Tf" alignment="0" min="-2" pref="500" max="-2" attributes="0"/>
+                      <Component id="qs1Lbl" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="resetBtn" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                              <Component id="submitBtn" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="displayBtn" min="-2" pref="106" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel1" min="-2" pref="498" max="-2" attributes="0"/>
+                          <Component id="qs3Tf" min="-2" pref="498" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="293" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -89,13 +87,13 @@
               <Component id="qs3Lbl" min="-2" pref="39" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="qs3Tf" min="-2" pref="39" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="49" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="resetBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="submitBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="displayBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="submitBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resetBtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -264,7 +262,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="displayBtn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="display"/>
+        <Property name="text" type="java.lang.String" value="Display"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="displayBtnActionPerformed"/>

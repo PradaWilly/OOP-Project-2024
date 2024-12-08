@@ -6,16 +6,17 @@ package ecotrackapp;
 
 /**
  *
- * @author cosmy
+ * @author sohei
  */
+import javax.swing.*;
+
+
 public class EcoTrackApp {
-
-
     public static void main(String[] args) {
         
-        LoginGUI Login = new LoginGUI();
-        Login.setVisible(true);
-        
+        //create an instance of the LoginGUI and make it visible first
+        LoginGUI myLogin= new LoginGUI();
+        myLogin.setVisible(true);
     }
     
 }

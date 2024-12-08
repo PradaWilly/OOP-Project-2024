@@ -10,23 +10,22 @@ import javax.swing.SwingWorker;
  *
  * @author sohei
  */
-public class HomeGUI extends javax.swing.JFrame{
+public class HomeGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form EnergyCalculatorGUI
      */
-    private int run;
     private int count;
-    
+
     SustainTips myTips;
+
     public HomeGUI() {
         initComponents();
-        run = 1;    
-        myTips =  new SustainTips();
+        myTips = new SustainTips();
         count = 0;
         //loopTips();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -169,7 +168,7 @@ public class HomeGUI extends javax.swing.JFrame{
                     .addComponent(calculatorSection, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                     .addComponent(surveySectionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(homeSectionBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(homeIconLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -193,39 +192,39 @@ public class HomeGUI extends javax.swing.JFrame{
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   
-   //Changes tips label based on count number
-    private void loopTips(){
-                
-                switch(count){
-                    case 0 :
-                         tipsLbl.setText(myTips.getTips()[0]);
-                         tipsSlide.setValue(20);
-                         count += 1;
-                         break;
-                    case 1:
-                        tipsLbl.setText(myTips.getTips()[1]);
-                        tipsSlide.setValue(40);
-                        count += 1;
-                        break;
-                    case 2:
-                        tipsLbl.setText(myTips.getTips()[2]);
-                        tipsSlide.setValue(60);
-                        count += 1;
-                        break;
-                    case 3:
-                        tipsLbl.setText(myTips.getTips()[3]);
-                        tipsSlide.setValue(80);
-                        count ++;
-                        break;
-                    case 4:
-                        tipsLbl.setText(myTips.getTips()[4]);
-                        tipsSlide.setValue(100);
-                        count = 0;
-                        break;
-                }
+
+    //Changes tips and puts them inside the tips label based on count number
+    private void loopTips() {
+
+        switch (count) {
+            case 0:
+                tipsLbl.setText(myTips.getTips()[0]);
+                tipsSlide.setValue(20);
+                count += 1;
+                break;
+            case 1:
+                tipsLbl.setText(myTips.getTips()[1]);
+                tipsSlide.setValue(40);
+                count += 1;
+                break;
+            case 2:
+                tipsLbl.setText(myTips.getTips()[2]);
+                tipsSlide.setValue(60);
+                count += 1;
+                break;
+            case 3:
+                tipsLbl.setText(myTips.getTips()[3]);
+                tipsSlide.setValue(80);
+                count++;
+                break;
+            case 4:
+                tipsLbl.setText(myTips.getTips()[4]);
+                tipsSlide.setValue(100);
+                count = 0;
+                break;
+        }
     }
-    
+
     private void surveySectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surveySectionBtnActionPerformed
         // TODO add your handling code here:
         ThisSurveyGUI surveyGUI = new ThisSurveyGUI();
@@ -233,8 +232,8 @@ public class HomeGUI extends javax.swing.JFrame{
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_surveySectionBtnActionPerformed
-    
-    
+
+
     private void calculatorSectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculatorSectionActionPerformed
         EnergyCalculatorGUI ec = new EnergyCalculatorGUI();
         this.setVisible(false);
@@ -250,17 +249,16 @@ public class HomeGUI extends javax.swing.JFrame{
         // TODO add your handling code here:
         loopTips();
     }//GEN-LAST:event_changeTipsBtnActionPerformed
-    
+
     /**
      * @param args the command line arguments
      */
-  public static void main(String args[]) {
-       
-        
+    public static void main(String args[]) {
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new HomeGUI().setVisible(true);
-                
+
             }
         });
     }

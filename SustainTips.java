@@ -29,40 +29,6 @@ public class SustainTips extends Thread{
         tips[4] = "Tip: Turn off your computer before leaving work";
     }
     
-    /*public void loopTips(int run, JLabel tipLbl, JSlider tipsSlide){
-        int slideValue = 0;
-        SustainTips myTips = new SustainTips();
-        
-        while(run == 1){
-              synchronized(myTips){
-                 try {
-                    myTips.wait(1000);
-                } catch (InterruptedException e) {
-                    System.out.println(e);
-                }
-              }
-            if(tipsSlide.getValue() < 20 ){
-               tipLbl.setText(myTips.getTips()[0]);
-                System.out.println(tipsSlide.getValue());
-            }
-            else if(tipsSlide.getValue() < 40 ){
-                tipLbl.setText(myTips.getTips()[1]);
-            }
-            else if(tipsSlide.getValue() < 60){
-                tipLbl.setText(myTips.getTips()[2]);
-            }
-            else if(tipsSlide.getValue() < 80){
-                tipLbl.setText(myTips.getTips()[3]);
-            }
-            else if(tipsSlide.getValue() < 100){
-                tipLbl.setText(myTips.getTips()[4]);
-            }
-             slideValue += 1;
-             tipsSlide.setValue(slideValue);
-             System.out.println(tipsSlide.getValue());
-        }
-    }*/
-    
 
     public String[] getTips() {
         return tips;

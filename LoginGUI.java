@@ -10,11 +10,9 @@ import java.io.IOException;
  */
 public class LoginGUI extends javax.swing.JFrame {
 
-
     public LoginGUI() {
         initComponents();
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -35,11 +33,12 @@ public class LoginGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
-        setLocation(new java.awt.Point(360, 160));
-        setMaximumSize(new java.awt.Dimension(800, 500));
-        setMinimumSize(new java.awt.Dimension(800, 500));
-        setPreferredSize(new java.awt.Dimension(800, 500));
-        setSize(new java.awt.Dimension(800, 500));
+        setLocation(new java.awt.Point(0, 0));
+        setMaximumSize(new java.awt.Dimension(850, 700));
+        setMinimumSize(new java.awt.Dimension(850, 600));
+        setPreferredSize(new java.awt.Dimension(850, 600));
+        setResizable(false);
+        setSize(new java.awt.Dimension(850, 670));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         emailSep1.setForeground(new java.awt.Color(102, 255, 102));
@@ -92,7 +91,7 @@ public class LoginGUI extends javax.swing.JFrame {
         loginLabel.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         loginLabel.setForeground(new java.awt.Color(102, 255, 102));
         loginLabel.setText("LOGIN");
-        getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, -1, -1));
+        getContentPane().add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, -1, -1));
 
         noAccount.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         noAccount.setText("Need an account ?");
@@ -143,10 +142,10 @@ public class LoginGUI extends javax.swing.JFrame {
                 .addComponent(EcoLog, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TrackLog)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(333, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 500));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,7 +161,7 @@ public class LoginGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_loginPasswordActionPerformed
 
     private void loginEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginEmailActionPerformed
-        
+
     }//GEN-LAST:event_loginEmailActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
@@ -171,19 +170,19 @@ public class LoginGUI extends javax.swing.JFrame {
         String pas = new String(loginPassword.getPassword());
 
         //check if either field is empty
-        if (mail.isEmpty() || pas.isEmpty()) {      
+        if (mail.isEmpty() || pas.isEmpty()) {
             javax.swing.JOptionPane.showMessageDialog(null, "Email and password are required.");
-        } else {       
+        } else {
             checkLoginInfo(mail, pas);
         }
-        
-    
+
+
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void showPassLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPassLogActionPerformed
-        if (showPassLog.isSelected()){
-            loginPassword.setEchoChar((char)0);
-        }else{
+        if (showPassLog.isSelected()) {
+            loginPassword.setEchoChar((char) 0);
+        } else {
             loginPassword.setEchoChar('•');
         }
 
@@ -197,31 +196,34 @@ public class LoginGUI extends javax.swing.JFrame {
         loginPassword.setText("");
     }//GEN-LAST:event_loginPasswordFocusGained
     private void checkLoginInfo(String mail, String pas) {
-    //read details from info.txt
-    try {
-        BufferedReader reader = new BufferedReader(new FileReader("info.txt"));
-        String checkLine;
-        boolean loginSuccess = false;   
-        
-        //read each line
-        while ((checkLine = reader.readLine()) != null) {
-            String[] userInfo = checkLine.split(" : ");     
-            //check if email and password match
-            if (userInfo[0].equals(mail) && userInfo[1].equals(pas)) {
-                loginSuccess = true;
-                break;
+        //read details from info.txt
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("info.txt"));
+            String checkLine;
+            boolean loginSuccess = false;
+
+            //read each line
+            while ((checkLine = reader.readLine()) != null) {
+                String[] userInfo = checkLine.split(" : ");
+                //check if email and password match
+                if (userInfo[0].equals(mail) && userInfo[1].equals(pas)) {
+                    loginSuccess = true;
+                    break;
+                }
             }
+
+            if (loginSuccess) {
+                javax.swing.JOptionPane.showMessageDialog(null, "Login successful!");
+                HomeGUI myHome = new HomeGUI();
+                this.dispose();
+                myHome.setVisible(true);
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(null, "Invalid email or password.");
+            }
+        } catch (IOException e) {
+            System.out.println("Error: " + e);
         }
-        
-        if (loginSuccess) {
-            javax.swing.JOptionPane.showMessageDialog(null, "Login successful!");
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(null, "Invalid email or password.");
-        }
-    } catch (IOException e) {
-        System.out.println("Error: " + e);
     }
-}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel EcoLog;
